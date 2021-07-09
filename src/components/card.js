@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 const Card = (article) => {
 
 
@@ -50,11 +52,17 @@ const Card = (article) => {
 
 const cardAppender = (selector) => {
   let a = document.querySelector(selector)
-  axios.get('http://localhost:5000/api/articles')
-  .then(response => {
-    a.appendChild(Card(response.data.articles))
-  })
-  return a
+   axios.get('http://localhost:5000/api/articles')
+    .then(response => {
+      let b = Object.values(response.data.articles).flat()
+      b.forEach(article => {
+        a.appendChild(Card(article))
+
+      })
+      
+    })
+
+  
   
 
 
