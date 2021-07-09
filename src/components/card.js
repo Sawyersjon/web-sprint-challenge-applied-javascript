@@ -1,5 +1,33 @@
 const Card = (article) => {
+
+
+    let container = document.createElement('div')
+    let headlineHTML = document.createElement('div')
+    let authorHTML = document.createElement('div')
+    let imgContainerHTML = document.createElement('div')
+    let imgHTML = document.createElement('img')
+    let spanName = document.createElement('span')
+
+    container.classList.add('card')
+    headlineHTML.classList.add('headline')
+    authorHTML.classList.add('author')
+    imgContainerHTML.classList.add('img-container')
   
+    headlineHTML.textContent = article.headline
+    imgHTML.src = article.authorPhoto
+    spanName.textContent = article.authorName
+
+    imgContainerHTML.appendChild(imgHTML)
+    authorHTML.appendChild(imgContainerHTML)
+    authorHTML.appendChild(spanName)
+    container.appendChild(headlineHTML)
+    container.appendChild(authorHTML)
+
+    container.addEventListener('click', () =>{
+      console.log(headlineHTML.textContent)
+  })
+  return container
+
   // TASK 5
   // ---------------------
   // Implement this function, which should return the markup you see below.
@@ -21,7 +49,12 @@ const Card = (article) => {
 }
 
 const cardAppender = (selector) => {
-
+  let a = document.querySelector(selector)
+  axios.get('http://localhost:5000/api/articles')
+  .then(response => {
+    a.appendChild(Card(response.data.articles))
+  })
+  return a
   
 
 
