@@ -14,7 +14,7 @@ You are not allowed to collaborate during the sprint challenge.
 - [ ] Open the assignment in Canvas and click on the "Set up git" option.
 - [ ] Follow instructions to set up Codegrade's Webhook and Deploy Key.
 - [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
-- [ ] Check to see that Codegrade has accepted your git submission.
+- [] Check to see that Codegrade has accepted your git submission.
 
 For a step-by-step on setting up Codegrade see [this guide.](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374)
 
@@ -65,7 +65,21 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+
+    The DOM is the structure of the web page.
+
 2. What is an event?
+
+    An event is something that happens on the page whether it be a click, a scroll, or even a press of a key.
+
 3. What is an event listener?
+
+    An event listener is a method that activates when the event happens.
+
 4. Why would we convert a NodeList into an Array?
+
+    So we can use JavaScript on them. NodeList are a browser API not a JavaScript API so we cannot use JavaScript on them until they are converted into an Array.
+
 5. What is a component?
+
+    A component is a piece of a greater whole.
